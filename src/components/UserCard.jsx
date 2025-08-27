@@ -1,8 +1,8 @@
 const UserCard = ({ user }) => {
   console.log(user);
-  const { firstName, lastName, photoUrl, age, gender, skills, about } = user;
+  const { firstName, lastName, photoUrl, age, gender, about } = user;
   return (
-    <div className="card bg-base-300 w-80 h-[450px] shadow-xl mt-10">
+    <div className="card bg-base-300 w-80 h-[550px] shadow-xl mt-10">
       <figure>
         <img src={user.photoUrl} alt="photo" />
       </figure>
