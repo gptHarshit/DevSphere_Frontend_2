@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 import UserCard from "./UserCard";
 import axios from "axios";
 import { BASE_URL } from "../utils/constants";
@@ -9,8 +9,8 @@ const EditProfile = ({ user }) => {
   const [firstName, setFirstName] = useState(user.firstName);
   const [lastName, setLastName] = useState(user.lastName);
   const [photoUrl, setPhotoUrl] = useState(user.photoUrl);
-  const [gender, setGender] = useState(user.gender);
-  const [age, setAge] = useState(user.age);
+  const [gender, setGender] = useState(user.gender || "");
+  const [age, setAge] = useState(user.age || "");
   const [about, setAbout] = useState(user.about);
   const [error, setError] = useState("");
   const [showtoast, setShowToast] = useState(false);
@@ -34,7 +34,6 @@ const EditProfile = ({ user }) => {
       
       dispatch(addUser(res?.data?.data));
       setShowToast(true);
-
       setTimeout(() => {
         setShowToast(false);
       }, 3000);
