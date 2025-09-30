@@ -12,6 +12,7 @@ import Privacy from "./components/Privacy";
 import Shipping from "./components/Shipping";
 import TermsConditions from "./components/TermsConditions";
 import ContactUs from "./components/ContactUs";
+import Chat from "./components/Chat";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
               <Route path="/profile" element={<Profile />} />
               <Route path="/connection" element={<Connection />} />
               <Route path="/request" element={<Request />} />
+              <Route path="/chat/:targetUserId" element={<Chat />} />
               <Route path="/cancellationrefunds" element={<CancellationRefunds/>} />
               <Route path="/privacy" element={<Privacy/>} />
               <Route path="/shipping" element={<Shipping/>} />
