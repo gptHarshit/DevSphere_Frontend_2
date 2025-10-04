@@ -144,7 +144,6 @@ const Connection = () => {
   return (
     <div className="min-h-screen bg-gray-50 py-8 px-4">
       <div className="max-w-4xl mx-auto">
-        {/* Header */}
         <div className="text-center mb-8">
           <h1 className="text-3xl font-semibold text-gray-800 mb-4">
             Your Connections
@@ -155,7 +154,6 @@ const Connection = () => {
           </p>
         </div>
 
-        {/* Connections Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {connections.map((connection) => {
             const { _id, firstName, lastName, age, gender,  photoUrl } =
@@ -166,7 +164,7 @@ const Connection = () => {
                 className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-md transition-all duration-200"
               >
                 <div className="flex items-start space-x-4">
-                  {/* Avatar */}
+          
                   <div className="flex-shrink-0">
                     <div className="w-16 h-16 rounded-full border-2 border-gray-100 overflow-hidden bg-gray-200">
                       <img
@@ -185,7 +183,6 @@ const Connection = () => {
                     </div>
                   </div>
 
-                  {/* Info */}
                   <div className="flex-1 min-w-0">
                     <h2 className="text-lg font-semibold text-gray-800 truncate">
                       {firstName + " " + lastName}
@@ -198,7 +195,7 @@ const Connection = () => {
                         {gender && `${gender}`}
                       </p>
                     )}
-                    
+
                     <div className="mt-4">
                       <Link
                         to={"/chat/" + _id}
