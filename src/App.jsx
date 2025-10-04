@@ -13,6 +13,8 @@ import Shipping from "./components/Shipping";
 import TermsConditions from "./components/TermsConditions";
 import ContactUs from "./components/ContactUs";
 import Chat from "./components/Chat";
+import axios from "axios";
+axios.defaults.withCredentials = true;
 
 function App() {
   return (
