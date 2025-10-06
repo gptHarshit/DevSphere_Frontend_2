@@ -55,7 +55,6 @@ const Feed = () => {
   return (
     <div className="min-h-screen bg-gray-50 py-8 px-4">
       <div className="max-w-6xl mx-auto">
-        {/* Header */}
         <div className="text-center mb-8">
           <h1 className="text-3xl font-semibold text-gray-800 mb-4">
             Discover Developers
@@ -64,8 +63,6 @@ const Feed = () => {
             Connect with amazing developers in your network
           </p>
         </div>
-
-        {/* Feed Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {feed.map((user, index) => (
             <UserCard 
